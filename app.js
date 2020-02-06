@@ -1,28 +1,48 @@
-const list = [];
+
+(function($) {
+  const list = [];
 let counter = 0;
 $(() => {
    $('form').on('submit', event=> {
      event.preventDefault();
   const inputValue = $('#input-box').val()
-  console.log(inputValue);
   list.push(inputValue)
   render()
-console.log(list)
-  counter++;
+  
+ counter++; 
+add();
 
    })
 })
 
 
-const render = () => {
+const render = (e) => {
     const leftList = $(".left-list");
-      leftList.append("<li>"+"<p>"+list[counter]+"</p><button class='complete'>Complete</button</li>");
+      leftList.append("<li>"+"<p>"+list[counter] +"</p><button class='complete'>Complete</button</li>");  
+}
 
-
-    console.log(counter)
-    // appending the list item to the ul
-    
+function call(){
+  $(".removeli").click(function(){
+  $(this).fadeOut(); 
+})
    
 }
 
 
+function add(){
+  $(".complete").click(function(e){
+  e.preventDefault();
+      let store= $(e.target).prev('p').text();
+     const RightList = $(".right-list");
+      RightList.append("<li class='removeli'>"+"<p>"+store+"</p><button class='remove'>Remove</button</li>");
+      $(e.target).parent().fadeOut();
+call();
+}); 
+
+       
+}
+ 
+
+
+
+})(jQuery);
