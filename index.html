@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>To Do App</title>
+    <!--     CSS stylesheet -->
+    <link rel="stylesheet" href="main.css">
+
+    <!-- link with necessary file  -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="app.js"></script>
+  </head>
+
+
+  <body>
+
+    <!-- container start here  -->
+    <div class="container">
+        <!-- form section start here  -->
+      <div class="form-box">
+        <h1>What to Do</h1>
+      <form class="d-flex justify-content">
+        <input type="text" name="" value="" id="input-box">
+        <button type="submit" name="button" id="submit">ADD</button>
+      </form>
+      </div>
+
+        <!-- form section end here  -->
+
+      <!-- list section start here -->
+      <div class="lists d-flex ">
+        
+        <!-- left side list start here  -->
+        <div id="to-do-list">
+          <h2>Things to Do</h2>
+          <ul class="left-list">
+        
+             <!--  <p class="left-content">Alu kinte bazar a jete hobe</p> -->
+              <!-- <button class="complete">Completed</button> -->
+    
+            
+          </ul>
+        </div> <!-- left side list end here  -->
+
+        <!-- right side list start here  -->
+        <div id="completed">
+          <h2>Things That are Done</h2>
+          <ul class="right-list">
+            <li>
+              <p class="left-content">Alu kinte bazar a jete hobe</p>
+              <button class="remove">Remove</button>
+            </li>
+          </ul>
+        </div> <!-- right side list end here -->
+
+      </div> <!-- list section end here -->
+    </div> <!-- container end here  -->
+
+
+
+  </body>
+</html>

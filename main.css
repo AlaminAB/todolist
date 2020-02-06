@@ -1,0 +1,117 @@
+/* Import some fonts */
+@import url('https://fonts.googleapis.com/css?family=Dosis|Nunito');
+
+*{
+  box-sizing: border-box;
+}
+body{
+  padding: 0;
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+}
+
+
+/*  container  */
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+/* default css  */
+.d-flex{
+display: flex;
+}
+.align-items{
+align-items: center;
+
+}
+.justify-content{
+justify-content: center;
+}
+
+
+/* form box start here  */
+.form-box {
+    margin: 0 auto;
+    max-width: 500px;
+    text-align: center;
+}
+
+.form-box h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 20px;
+}
+form.d-flex.justify-content input {
+    width: 100%;
+    
+}
+
+form.d-flex.justify-content button {
+    margin-left: 15px;
+    padding: 8px 18px;
+    background: #B4201B;
+    color: #fff;
+    outline: none;
+    border: 1px solid #B4201B;
+    border-radius: 2px;
+    cursor: pointer;
+}
+/* form box end here  */
+
+/* list section start here  */
+.lists.d-flex {
+    justify-content: space-around;
+    padding-top: 20px;
+}
+div#to-do-list {
+    text-align: center;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+p {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 20px;
+    line-height: 24px;
+}
+ul li {
+    
+    padding: 20px 20px;
+    width: 400px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 18px;
+}
+
+.left-list li{
+  background: #6193F0;
+}
+
+.right-list li{
+  background: #EF6294;
+  text-align: center;
+}
+
+ul li button {
+    padding: 8px 15px;
+    border-radius: 3px;
+    border: 1px solid #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    outline: none;
+    background: #fff;
+}
+div#completed {
+    text-align: center;
+}
+/* list section end here  */
