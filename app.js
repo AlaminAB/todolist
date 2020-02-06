@@ -2,47 +2,61 @@
 (function($) {
   const list = [];
 let counter = 0;
+
 $(() => {
    $('form').on('submit', event=> {
      event.preventDefault();
-  const inputValue = $('#input-box').val()
+  let inputValue = $('#input-box').val()
   list.push(inputValue)
-  render()
-  
- counter++; 
-add();
 
+ render()
+  counter++; 
    })
+
 })
 
+ 
+function render(){
 
-const render = (e) => {
-    const leftList = $(".left-list");
-      leftList.append("<li>"+"<p>"+list[counter] +"</p><button class='complete'>Complete</button</li>");  
+// validation 
+if(list[counter] == ""){
+  alert("please input somthing ")
+}else{
+const leftList = $(".left-list");
+      leftList.append("<li class='inputli'>"+"<p>"+list[counter] +"</p><button class='complete'>Complete</button</li>");
 }
 
-function call(){
+// value transfer to remove section 
+      $(".inputli").click(function(e){
+
+      let ind= $(".inputli").index(this);
+
+       if(e.target.className == "complete"){
+
+         const RightList = $(".right-list");
+       RightList.append("<li class='removeli'>"+"<p>"+list[ind]+"</p><button class='remove'>Remove</button</li>");
+        $(this).fadeOut();
+       }
+      remove();
+      console.log("working")
+}); 
+ 
+  
+}
+
+// remove 
+function remove(){
   $(".removeli").click(function(){
   $(this).fadeOut(); 
 })
-   
+
 }
 
 
-function add(){
-  $(".complete").click(function(e){
-  e.preventDefault();
-      let store= $(e.target).prev('p').text();
-     const RightList = $(".right-list");
-      RightList.append("<li class='removeli'>"+"<p>"+store+"</p><button class='remove'>Remove</button</li>");
-      $(e.target).parent().fadeOut();
-call();
-}); 
 
-       
-}
- 
+   
 
 
 
 })(jQuery);
+
